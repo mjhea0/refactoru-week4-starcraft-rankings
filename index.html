@@ -8,25 +8,41 @@
     <link rel="stylesheet" href="http://mleibman.github.io/SlickGrid/slick.grid.css" type="text/css"/>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-    <script src="http://mleibman.github.io/SlickGrid/lib/jquery.event.drag-2.2.js"></script>
-    <script src="http://mleibman.github.io/SlickGrid/slick.core.js"></script>
-    <script src="http://mleibman.github.io/SlickGrid/slick.grid.js"></script>
+    <style>
+      .body {padding-top: 10px;}
+      .well {max-width: 700px; background-color: transparent;}
+      .mytable {padding: 10px;}
+    </style>
     <script src="starcraft-data.js"></script>
     <script src="main.js"></script>
   </head>
   <body>
   	<div class="container"> 
-
-
-    	<center><h1>StarCraft Rankings</h1></center>
+        <center>
         <br>
-        <table class="table table-hover" style="text-align:right">
+        <div class="well">
+          <center><h1>Starcraft Rankings</h1></center>
+          <center><h4>Visible in one color (or hue)</h4></center>
+          <br>
+          <p>Care to sort?</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default sort">Score</button>
+            <button type="button" class="btn btn-default sort">Region</button>
+            <button type="button" class="btn btn-default sort">Race</button>
+            <button type="button" class="btn btn-default sort">Wins</button>
+            <button type="button" class="btn btn-default sort">Losses</button>
+          </div>
+          <div class="stats">
+          </div>
+          <br>
+          <br>
+        </center>
+        <table class="table table-hover mytable" style="text-align:right">
           <thead>
-            <tr><td><h3>Rank</h3></td><td><h3>Score</h3></td><td><h3>User</h3></td><td><h3>Name</h3></td><td><h3>Region</h3></td><td><h3>Race</h3></td><td><h3>Wins</h3></td><td><h3>Losses</h3></td></tr>
+            <tr><td class="test"><h3>Score</h3></td><td><h3>User</h3></td><td><h3>Name</h3></td><td><h3>Region</h3></td><td><h3>Race</h3></td><td><h3>Wins</h3></td><td><h3>Losses</h3></td></tr>
           </thead>
           <tbody class="users"></tbody>
         </table>
     </div>
-    
   </body>
 </html>
